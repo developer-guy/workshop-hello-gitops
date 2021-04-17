@@ -1,4 +1,4 @@
-FROM golang:1.14 as build
+FROM golang:1.16-alpine as build
 WORKDIR /build
 COPY . .
 RUN CGO_ENABLED=0 go build -o hello-gitops cmd/main.go
